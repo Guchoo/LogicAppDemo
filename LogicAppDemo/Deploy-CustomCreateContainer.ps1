@@ -31,9 +31,7 @@ $container = $null
 try { 
 	$container = Get-AzureStorageContainer -Name $Container 
 } 
-catch {
-	Write-Output '', 'Hei'
-}
+catch {}
 if (!$container) {
 	New-AzureStorageContainer -Name $Container -Permission Off
 }
